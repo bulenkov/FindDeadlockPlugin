@@ -1,0 +1,32 @@
+<idea-plugin>
+  <id>com.jetbrains.find.deadlock</id>
+  <name>Find Deadlock</name>
+  <version>1.0</version>
+  <vendor email="kb@jetbrains.com" url="http://www.yourcompany.com">JetBrains</vendor>
+
+  <description><![CDATA[
+The plugin tests editor to reproduce deadlock on Mac
+    ]]></description>
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="find.deadlock" class="com.intellij.FindDeadlockAction" text="Start typing">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
